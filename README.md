@@ -12,10 +12,13 @@ pip install openai
 # demo
 a demo of the module is included with this repo:[demo](demo.py)
 
-try this prompts:
-read the file <filename>
+## try this prompts:
+```
+read the file <filename><br>
+```
+```
 write "<your text>" to the file <filename>
-
+```
 # documantation
 ## inital setup:
 ```python
