@@ -19,7 +19,10 @@ class chatbot:
     def addMsg(self,role,content): 
         self.msgLog.append({"role": role, "content":content})
     def chat(self,content):
-        self.addMsg("user",f"{self.prefix}:{content}")
+        if self.prefix == "":
+            self.addMsg("user",f"{content}")
+        else:
+            self.addMsg("user",f"{self.prefix}:{content}")
         return self.generate()
     def generate(self):
         GPT_Model = "gpt-3.5-turbo"#"gpt-3.5-turbo-0613"
